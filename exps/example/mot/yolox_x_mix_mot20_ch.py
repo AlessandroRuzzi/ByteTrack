@@ -41,9 +41,9 @@ class Exp(MyExp):
         )
 
         dataset = MOTDataset(
-            data_dir=os.path.join(get_yolox_datadir(), "mix_mot20_ch"),
+            data_dir=os.path.join(get_yolox_datadir(), "MOT20"),
             json_file=self.train_ann,
-            name='',
+            name='train',
             img_size=self.input_size,
             preproc=TrainTransform(
                 rgb_means=(0.485, 0.456, 0.406),
